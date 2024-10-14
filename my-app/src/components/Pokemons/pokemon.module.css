@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.pokemonPage {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: 0.1fr 1fr;
+  width: 100%;
+  height: 100vh;
+}
+
+.pokemonPage .nav {
+  background-color: rgba(107, 107, 223, 0.849);
+  grid-column: span 4 / span 4;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60px;
+}
+.pokemonPage .nav > button {
+  border: white 1px solid;
+  margin-inline-start: 10px;
+  border-radius: 4px;
+  color: white;
+  padding: 2px;
+  height: 30px;
+}
+
+.pokemonPage .nav > input {
+  border: white 1px solid;
+  margin-inline-start: 10px;
+  border-radius: 4px;
+  color: white;
+  padding: 5px;
+  height: 30px;
+  outline: 1px solid rgba(22, 22, 233, 0.712);
+}
+
+.pokemonPage .pokemonBox {
+  grid-column: span 3 / span 3;
+}
+
+.aside {
+  background-color: rgba(32, 32, 252, 0.452);
+  padding: 20px;
+}
+
+.aside ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 20px;
+  color: white;
+}
+.aside ul > * {
+  transition: 0.2s ease-in;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.aside ul li:hover {
+  opacity: 50%;
+  background-color: rgba(128, 128, 128, 0.151);
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+  border-radius: 10px;
+}
+
+.pokemonBox {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding: 20px;
+  overflow: auto;
+  gap: 10px;
+}
+
+.card {
+width: 100%;
+    height: 200px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+  width: 100%;
+  height: max-content;
+  margin-top: 20px;
+  grid-column: span 4 / span 4;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+
+.btn {
+  border: 1px solid rgb(231 36 144 / 35%);
+  background-color: rgba(107, 107, 223, 0.849);
+  color: white;
+  width: 75px;
+  text-align: center;
+  padding: 4px;
+  margin-inline: 4px;
+  border-radius: 5px;
+}
+
+/* .box{
+    position: relative;
+} */
+
+.images {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  transform-origin: right center;
+  cursor: pointer;
+  margin: auto;
+}
+
+.images .front,
+.images .back {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  backface-visibility: hidden;
+}
+
+.images .back {
+  transform: rotateY(180deg);
+}
+
+.images:hover {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.cardText{
+    font-size: 17px;
+    text-transform: capitalize;
+    padding-left: 10px;
+    background-color: rgba(187, 186, 186, 0.13);
+}
+
+
+.mainPage{
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgb(40, 69, 233);
+  border-radius: 50%;
+  color: blue;
+  text-align: center;
+  background-color: rgba(250, 250, 250, 0.521);
+}
+
+.go{
+  margin:0 5px;
+  width: 40px;
+  height: 30px;
+  border: 1px solid rgb(40, 69, 233);
+  border-radius: 3px;
+  color: rgba(0, 0, 255, 0.411);
+  text-align: center;
+  background-color: rgba(206, 203, 203, 0.493);
+}
+
+
+.slidecontainer {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #ffffff;
+  outline: none;
+  opacity: 1;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 0.5;
+  background: #d6def5a4;
+
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+
